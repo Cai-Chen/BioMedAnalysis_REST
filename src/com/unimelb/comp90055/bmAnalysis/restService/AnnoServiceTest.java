@@ -16,8 +16,6 @@ public class AnnoServiceTest
 
 		JettyHttpContainerFactory.createServer(new URI("http://localhost:9998"), config);
 		
-		RetrieveSTthread retrieveSTthread = new RetrieveSTthread();
-		retrieveSTthread.start();
 	}
 
 }

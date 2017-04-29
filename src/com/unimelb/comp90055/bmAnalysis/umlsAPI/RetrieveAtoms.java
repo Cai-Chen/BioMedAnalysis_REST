@@ -106,9 +106,12 @@ public class RetrieveAtoms
 		AtomLite[] atoms;
 		List<AtomLite> atomsList = new ArrayList<AtomLite>();
 		int page = 1;
-		int pageCount;
+		int pageCount = 999;
 		do
 		{
+			// If ST is not retrieved, then wait
+			if(!ticketClient.hasSTFromQueue())
+				continue;
 			Response response = null;
 			RestAssured.baseURI = "https://uts-ws.nlm.nih.gov";
 			System.out.println("Atom Retrieve Start_1 Time " + new java.util.Date().getTime());

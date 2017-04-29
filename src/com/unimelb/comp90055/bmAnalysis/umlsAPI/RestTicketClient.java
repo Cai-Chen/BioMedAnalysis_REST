@@ -128,10 +128,15 @@ public class RestTicketClient
 		Response response = given()
 				.request().with().param("service", service).expect().statusCode(200).when()
 				.post("/cas/v1/tickets/" + tgt);
-
+		
 		String st = response.getBody().asString();
 		//System.out.println("ST Creating End Time " + new java.util.Date().getTime());
 		return st;
+	}
+	
+	public boolean hasSTFromQueue()
+	{
+		return ServiceTicketManager.getInstance().hasST();
 	}
 	
 	public String getSTFromQueue()

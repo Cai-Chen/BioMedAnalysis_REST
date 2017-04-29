@@ -26,7 +26,10 @@ import org.apache.uima.jcas.cas.StringArray;
 import org.apache.uima.resource.ResourceInitializationException;
 
 import com.unimelb.comp90055.bmAnalysis.umlsAPI.AtomLite;
+import com.unimelb.comp90055.bmAnalysis.umlsAPI.AtomManager;
 import com.unimelb.comp90055.bmAnalysis.umlsAPI.RetrieveAtoms;
+import com.unimelb.comp90055.bmAnalysis.umlsAPI.RetrieveAtomsThread;
+import com.unimelb.comp90055.bmAnalysis.umlsAPI.RetrieveSTthread;
 import com.unimelb.comp90055.bmAnalysis.type.AcronymAbbrev;
 import com.unimelb.comp90055.bmAnalysis.type.Atom;
 import com.unimelb.comp90055.bmAnalysis.type.Candidate;
@@ -52,8 +55,8 @@ public class BMAnnotator extends org.apache.uima.fit.component.JCasAnnotator_Imp
 {
 	// MetaMap API
 	private MetaMapApi api;
-	// Retrive atoms from UMLS
-	private RetrieveAtoms ra;
+	// Retrieve atoms from UMLS
+	// private RetrieveAtoms ra;
 	// Parameters
 	public static final String PARAM_LANGUAGE = "language";
 	public static final String PARAM_SEMGROUP = "semGroup";
@@ -79,7 +82,10 @@ public class BMAnnotator extends org.apache.uima.fit.component.JCasAnnotator_Imp
 		if(option.length() > 0)
 			this.api.setOptions(option);
 		
-		ra = new RetrieveAtoms();
+		// ra = new RetrieveAtoms();
+		// Thread to retrieve ST
+		RetrieveSTthread retrieveSTthread = new RetrieveSTthread();
+		retrieveSTthread.start();
 	}
 	
 	// Set semantic type option from parameter
@@ -201,7 +207,37 @@ public class BMAnnotator extends org.apache.uima.fit.component.JCasAnnotator_Imp
 		return option;
 
 	}
+	
+	private void createThreadToRetrieveAtoms(List<Result> resultList) throws Exception
+	{
+		for(Result result : resultList)
+			for (gov.nih.nlm.nls.metamap.Utterance utterance : result.getUtteranceList())
+				for (PCM pcm : utterance.getPCMList())
+					for(gov.nih.nlm.nls.metamap.Mapping map : pcm.getMappingList())
+						for (Ev ev : map.getEvList())
+						{
+							RetrieveAtomsThread thread = new RetrieveAtomsThread(ev.getConceptId(), language);
+							thread.start();
+						}
+	}
+	
+	public void process1(JCas jcas) throws AnalysisEngineProcessException
+	{
+		// Get the text to be analyzed
+		String docText = jcas.getDocumentText();
+		// Invoke the query of the API
+		List<Result> resultList = this.api.processCitationsFromString(docText.trim());
+		// Create threads to retrieve atoms
+		try
+		{
+			createThreadToRetrieveAtoms(resultList);
 
+		} catch (Exception e1)
+		{
+			e1.printStackTrace();
+		}
+	}
+	
 	@Override
 	public void process(JCas jcas) throws AnalysisEngineProcessException
 	{
@@ -209,6 +245,15 @@ public class BMAnnotator extends org.apache.uima.fit.component.JCasAnnotator_Imp
 		String docText = jcas.getDocumentText();
 		// Invoke the query of the API
 		List<Result> resultList = this.api.processCitationsFromString(docText.trim());
+		// Create threads to retrieve atoms
+		try
+		{
+			createThreadToRetrieveAtoms(resultList);
+			
+		} catch (Exception e1)
+		{
+			e1.printStackTrace();
+		}
 		// Index of each result in result List
 		int resultStartIndex = 0;
 		// Loop to traverse the result List
@@ -551,7 +596,12 @@ public class BMAnnotator extends org.apache.uima.fit.component.JCasAnnotator_Imp
 			// Add atoms to the candidate	
 			List<Atom> atoms = new ArrayList<Atom>();
 			Atom atom;
-			List<AtomLite> atomLiteList = ra.retrieveAtomsList(ev.getConceptId(), language);
+			List<AtomLite> atomLiteList = null;
+			do
+			{
+				atomLiteList = AtomManager.getInstance().getAtomList(ev.getConceptId() + language);
+			}
+			while(atomLiteList == null);
 			for(AtomLite atomLite : atomLiteList)
 			{
 				atom = new Atom(jcas);

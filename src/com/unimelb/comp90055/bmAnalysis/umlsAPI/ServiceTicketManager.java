@@ -36,6 +36,14 @@ public class ServiceTicketManager
 		stQueue.add(st);
 	}
 	
+	public boolean hasST()
+	{
+		if(stQueue.isEmpty())
+			return false;
+		else
+			return true;
+	}
+	
 	public String getST()
 	{
 		return stQueue.poll().getSt();
