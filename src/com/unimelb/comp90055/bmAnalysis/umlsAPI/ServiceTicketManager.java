@@ -6,6 +6,8 @@ import java.util.Date;
 import java.util.PriorityQueue;
 import java.util.Scanner;
 
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
+
 public class ServiceTicketManager
 {
 	private PriorityQueue<ServiceTicket> stQueue;
@@ -36,17 +38,11 @@ public class ServiceTicketManager
 		stQueue.add(st);
 	}
 	
-	public boolean hasST()
+	public synchronized String getST()
 	{
-		if(stQueue.isEmpty())
-			return false;
-		else
-			return true;
-	}
-	
-	public String getST()
-	{
-		return stQueue.poll().getSt();
+		if(!stQueue.isEmpty())
+			return stQueue.poll().getSt();
+		return null;
 	}
 	
 	public void refresh()
@@ -77,8 +73,11 @@ public class ServiceTicketManager
 		while(size <= 10)
 		{
 			String st = ticketClient.getST(tgt);
-			stQueue.add(new ServiceTicket(st, new Date()));
-			size++;
+			if(st != null)
+			{
+				stQueue.add(new ServiceTicket(st, new Date()));
+				size++;
+			}
 		}
 		
 	}

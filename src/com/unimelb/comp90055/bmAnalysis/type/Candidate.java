@@ -13,7 +13,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** The meta elements found in the text. Those are then used as candidates and mappings.
- * Updated by JCasGen Tue Apr 25 21:29:31 AEST 2017
+ * Updated by JCasGen Sun Apr 30 12:34:28 AEST 2017
  * XML source: C:/Users/Administrator/workspace/BioMedAnalysis_REST/desc/BMAnalysisEngineDescriptor.xml
  * @generated */
 public class Candidate extends Annotation {
@@ -77,28 +77,6 @@ public class Candidate extends Annotation {
   private void readObject() {/*default - does nothing empty block */}
      
  
-    
-  //*--------------*
-  //* Feature: score
-
-  /** getter for score - gets The score of this meta element (0 <= x <= 1000).
-   * @generated
-   * @return value of the feature 
-   */
-  public int getScore() {
-    if (Candidate_Type.featOkTst && ((Candidate_Type)jcasType).casFeat_score == null)
-      jcasType.jcas.throwFeatMissing("score", "com.unimelb.comp90055.bmAnalysis.type.Candidate");
-    return jcasType.ll_cas.ll_getIntValue(addr, ((Candidate_Type)jcasType).casFeatCode_score);}
-    
-  /** setter for score - sets The score of this meta element (0 <= x <= 1000). 
-   * @generated
-   * @param v value to set into the feature 
-   */
-  public void setScore(int v) {
-    if (Candidate_Type.featOkTst && ((Candidate_Type)jcasType).casFeat_score == null)
-      jcasType.jcas.throwFeatMissing("score", "com.unimelb.comp90055.bmAnalysis.type.Candidate");
-    jcasType.ll_cas.ll_setIntValue(addr, ((Candidate_Type)jcasType).casFeatCode_score, v);}    
-   
     
   //*--------------*
   //* Feature: spans
@@ -189,72 +167,6 @@ public class Candidate extends Annotation {
    
     
   //*--------------*
-  //* Feature: preferred
-
-  /** getter for preferred - gets 
-   * @generated
-   * @return value of the feature 
-   */
-  public String getPreferred() {
-    if (Candidate_Type.featOkTst && ((Candidate_Type)jcasType).casFeat_preferred == null)
-      jcasType.jcas.throwFeatMissing("preferred", "com.unimelb.comp90055.bmAnalysis.type.Candidate");
-    return jcasType.ll_cas.ll_getStringValue(addr, ((Candidate_Type)jcasType).casFeatCode_preferred);}
-    
-  /** setter for preferred - sets  
-   * @generated
-   * @param v value to set into the feature 
-   */
-  public void setPreferred(String v) {
-    if (Candidate_Type.featOkTst && ((Candidate_Type)jcasType).casFeat_preferred == null)
-      jcasType.jcas.throwFeatMissing("preferred", "com.unimelb.comp90055.bmAnalysis.type.Candidate");
-    jcasType.ll_cas.ll_setStringValue(addr, ((Candidate_Type)jcasType).casFeatCode_preferred, v);}    
-   
-    
-  //*--------------*
-  //* Feature: head
-
-  /** getter for head - gets 
-   * @generated
-   * @return value of the feature 
-   */
-  public boolean getHead() {
-    if (Candidate_Type.featOkTst && ((Candidate_Type)jcasType).casFeat_head == null)
-      jcasType.jcas.throwFeatMissing("head", "com.unimelb.comp90055.bmAnalysis.type.Candidate");
-    return jcasType.ll_cas.ll_getBooleanValue(addr, ((Candidate_Type)jcasType).casFeatCode_head);}
-    
-  /** setter for head - sets  
-   * @generated
-   * @param v value to set into the feature 
-   */
-  public void setHead(boolean v) {
-    if (Candidate_Type.featOkTst && ((Candidate_Type)jcasType).casFeat_head == null)
-      jcasType.jcas.throwFeatMissing("head", "com.unimelb.comp90055.bmAnalysis.type.Candidate");
-    jcasType.ll_cas.ll_setBooleanValue(addr, ((Candidate_Type)jcasType).casFeatCode_head, v);}    
-   
-    
-  //*--------------*
-  //* Feature: overmatch
-
-  /** getter for overmatch - gets 
-   * @generated
-   * @return value of the feature 
-   */
-  public boolean getOvermatch() {
-    if (Candidate_Type.featOkTst && ((Candidate_Type)jcasType).casFeat_overmatch == null)
-      jcasType.jcas.throwFeatMissing("overmatch", "com.unimelb.comp90055.bmAnalysis.type.Candidate");
-    return jcasType.ll_cas.ll_getBooleanValue(addr, ((Candidate_Type)jcasType).casFeatCode_overmatch);}
-    
-  /** setter for overmatch - sets  
-   * @generated
-   * @param v value to set into the feature 
-   */
-  public void setOvermatch(boolean v) {
-    if (Candidate_Type.featOkTst && ((Candidate_Type)jcasType).casFeat_overmatch == null)
-      jcasType.jcas.throwFeatMissing("overmatch", "com.unimelb.comp90055.bmAnalysis.type.Candidate");
-    jcasType.ll_cas.ll_setBooleanValue(addr, ((Candidate_Type)jcasType).casFeatCode_overmatch, v);}    
-   
-    
-  //*--------------*
   //* Feature: sources
 
   /** getter for sources - gets 
@@ -340,94 +252,6 @@ public class Candidate extends Annotation {
       jcasType.jcas.throwFeatMissing("semanticTypes", "com.unimelb.comp90055.bmAnalysis.type.Candidate");
     jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((Candidate_Type)jcasType).casFeatCode_semanticTypes), i);
     jcasType.ll_cas.ll_setStringArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((Candidate_Type)jcasType).casFeatCode_semanticTypes), i, v);}
-   
-    
-  //*--------------*
-  //* Feature: matchedwords
-
-  /** getter for matchedwords - gets 
-   * @generated
-   * @return value of the feature 
-   */
-  public StringArray getMatchedwords() {
-    if (Candidate_Type.featOkTst && ((Candidate_Type)jcasType).casFeat_matchedwords == null)
-      jcasType.jcas.throwFeatMissing("matchedwords", "com.unimelb.comp90055.bmAnalysis.type.Candidate");
-    return (StringArray)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Candidate_Type)jcasType).casFeatCode_matchedwords)));}
-    
-  /** setter for matchedwords - sets  
-   * @generated
-   * @param v value to set into the feature 
-   */
-  public void setMatchedwords(StringArray v) {
-    if (Candidate_Type.featOkTst && ((Candidate_Type)jcasType).casFeat_matchedwords == null)
-      jcasType.jcas.throwFeatMissing("matchedwords", "com.unimelb.comp90055.bmAnalysis.type.Candidate");
-    jcasType.ll_cas.ll_setRefValue(addr, ((Candidate_Type)jcasType).casFeatCode_matchedwords, jcasType.ll_cas.ll_getFSRef(v));}    
-    
-  /** indexed getter for matchedwords - gets an indexed value - 
-   * @generated
-   * @param i index in the array to get
-   * @return value of the element at index i 
-   */
-  public String getMatchedwords(int i) {
-    if (Candidate_Type.featOkTst && ((Candidate_Type)jcasType).casFeat_matchedwords == null)
-      jcasType.jcas.throwFeatMissing("matchedwords", "com.unimelb.comp90055.bmAnalysis.type.Candidate");
-    jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((Candidate_Type)jcasType).casFeatCode_matchedwords), i);
-    return jcasType.ll_cas.ll_getStringArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((Candidate_Type)jcasType).casFeatCode_matchedwords), i);}
-
-  /** indexed setter for matchedwords - sets an indexed value - 
-   * @generated
-   * @param i index in the array to set
-   * @param v value to set into the array 
-   */
-  public void setMatchedwords(int i, String v) { 
-    if (Candidate_Type.featOkTst && ((Candidate_Type)jcasType).casFeat_matchedwords == null)
-      jcasType.jcas.throwFeatMissing("matchedwords", "com.unimelb.comp90055.bmAnalysis.type.Candidate");
-    jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((Candidate_Type)jcasType).casFeatCode_matchedwords), i);
-    jcasType.ll_cas.ll_setStringArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((Candidate_Type)jcasType).casFeatCode_matchedwords), i, v);}
-   
-    
-  //*--------------*
-  //* Feature: matchMap
-
-  /** getter for matchMap - gets 
-   * @generated
-   * @return value of the feature 
-   */
-  public FSArray getMatchMap() {
-    if (Candidate_Type.featOkTst && ((Candidate_Type)jcasType).casFeat_matchMap == null)
-      jcasType.jcas.throwFeatMissing("matchMap", "com.unimelb.comp90055.bmAnalysis.type.Candidate");
-    return (FSArray)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefValue(addr, ((Candidate_Type)jcasType).casFeatCode_matchMap)));}
-    
-  /** setter for matchMap - sets  
-   * @generated
-   * @param v value to set into the feature 
-   */
-  public void setMatchMap(FSArray v) {
-    if (Candidate_Type.featOkTst && ((Candidate_Type)jcasType).casFeat_matchMap == null)
-      jcasType.jcas.throwFeatMissing("matchMap", "com.unimelb.comp90055.bmAnalysis.type.Candidate");
-    jcasType.ll_cas.ll_setRefValue(addr, ((Candidate_Type)jcasType).casFeatCode_matchMap, jcasType.ll_cas.ll_getFSRef(v));}    
-    
-  /** indexed getter for matchMap - gets an indexed value - 
-   * @generated
-   * @param i index in the array to get
-   * @return value of the element at index i 
-   */
-  public MatchMap getMatchMap(int i) {
-    if (Candidate_Type.featOkTst && ((Candidate_Type)jcasType).casFeat_matchMap == null)
-      jcasType.jcas.throwFeatMissing("matchMap", "com.unimelb.comp90055.bmAnalysis.type.Candidate");
-    jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((Candidate_Type)jcasType).casFeatCode_matchMap), i);
-    return (MatchMap)(jcasType.ll_cas.ll_getFSForRef(jcasType.ll_cas.ll_getRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((Candidate_Type)jcasType).casFeatCode_matchMap), i)));}
-
-  /** indexed setter for matchMap - sets an indexed value - 
-   * @generated
-   * @param i index in the array to set
-   * @param v value to set into the array 
-   */
-  public void setMatchMap(int i, MatchMap v) { 
-    if (Candidate_Type.featOkTst && ((Candidate_Type)jcasType).casFeat_matchMap == null)
-      jcasType.jcas.throwFeatMissing("matchMap", "com.unimelb.comp90055.bmAnalysis.type.Candidate");
-    jcasType.jcas.checkArrayBounds(jcasType.ll_cas.ll_getRefValue(addr, ((Candidate_Type)jcasType).casFeatCode_matchMap), i);
-    jcasType.ll_cas.ll_setRefArrayValue(jcasType.ll_cas.ll_getRefValue(addr, ((Candidate_Type)jcasType).casFeatCode_matchMap), i, jcasType.ll_cas.ll_getFSRef(v));}
    
     
   //*--------------*

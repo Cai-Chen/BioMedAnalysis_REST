@@ -221,7 +221,8 @@ public class BMAnnotator extends org.apache.uima.fit.component.JCasAnnotator_Imp
 						}
 	}
 	
-	public void process1(JCas jcas) throws AnalysisEngineProcessException
+	@Override
+	public void process(JCas jcas) throws AnalysisEngineProcessException
 	{
 		// Get the text to be analyzed
 		String docText = jcas.getDocumentText();
@@ -236,9 +237,113 @@ public class BMAnnotator extends org.apache.uima.fit.component.JCasAnnotator_Imp
 		{
 			e1.printStackTrace();
 		}
+		// Index of each result in result List
+		int resultStartIndex = 0;
+		// Loop to traverse the result List
+		for (Result result : resultList)
+		{
+			if (result != null)
+			{
+				try
+				{
+					// Start position of result in whole text
+					int citationStart = docText.indexOf(result.getInputText(), resultStartIndex);
+					// Assign 0 if not match
+					if (citationStart == -1)
+						citationStart = 0;
+					
+					List<Candidate> candidates = processCandidates(jcas, result, citationStart);
+					FSArray candidateArray = new FSArray(jcas, candidates.size());
+					candidateArray.copyFromArray(candidates.toArray(new Candidate[0]), 0, 0, candidateArray.size());
+					candidateArray.addToIndexes(jcas);
+
+				} catch (Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
+			// Increase the index of the result
+			resultStartIndex = resultStartIndex + result.getInputText().length();
+		}
 	}
 	
-	@Override
+	private List<Candidate> processCandidates(JCas jcas, Result result, int citationStart)
+			throws Exception
+	{
+		Candidate currentCandidate;
+		List<Candidate> candidates = new ArrayList<Candidate>();
+		
+		for (gov.nih.nlm.nls.metamap.Utterance utterance : result.getUtteranceList())
+			for (PCM pcm : utterance.getPCMList())
+				for(gov.nih.nlm.nls.metamap.Mapping map : pcm.getMappingList())
+					for (Ev ev : map.getEvList())
+					{
+						int begin = 9999;
+						int end = 0;
+						for (Position pos : ev.getPositionalInfo())
+						{
+							begin = Math.min(begin, (int) pos.getX());
+							end = Math.max(end, pos.getX() + pos.getY());
+						}
+						int start = citationStart + begin;
+						int finish = citationStart + end;
+						
+						currentCandidate = new Candidate(jcas, start, finish);
+						currentCandidate.setCui(ev.getConceptId());
+						currentCandidate.setConcept(ev.getConceptName());
+						
+						StringArray sourceArray = new StringArray(jcas, ev.getSources().size());
+						// ev.getSources().toArray()
+						sourceArray.copyFromArray(ev.getSources().toArray(new String[0]), 0, 0, ev.getSources().size());
+						currentCandidate.setSources(sourceArray);
+						sourceArray.addToIndexes();
+						
+						StringArray semTypeArray = new StringArray(jcas, ev.getSemanticTypes().size());
+						// ev.getSemanticTypes().toArray()
+						semTypeArray.copyFromArray(ev.getSemanticTypes().toArray(new String[0]), 0, 0,
+								ev.getSemanticTypes().size());
+						currentCandidate.setSemanticTypes(semTypeArray);
+						semTypeArray.addToIndexes();
+						
+						FSArray fsArray = createSpanFSArray(jcas, ev.getPositionalInfo(), citationStart);
+						currentCandidate.setSpans(fsArray);
+						fsArray.addToIndexes();
+						
+						// Add atoms to the candidate	
+						List<Atom> atoms = new ArrayList<Atom>();
+						Atom atom;
+						List<AtomLite> atomLiteList = null;
+						// Wait until the result of atoms is retrieved
+						boolean hasAtomList = false;
+						do
+						{
+							hasAtomList = AtomManager.getInstance().hasAtomList(ev.getConceptId() + language);
+							if(hasAtomList)
+								atomLiteList = AtomManager.getInstance().getAtomList(ev.getConceptId() + language);
+						}
+						while(!hasAtomList);
+						if(atomLiteList != null)
+							for(AtomLite atomLite : atomLiteList)
+							{
+								atom = new Atom(jcas);
+								atom.setAui(atomLite.getUi());
+								atom.setName(atomLite.getName());
+								atom.setLanguage(atomLite.getLanguage());
+								atoms.add(atom);
+							}
+						FSArray atomsArray = new FSArray(jcas, atomLiteList == null ? 0 : atomLiteList.size());
+						atomsArray.copyFromArray(atoms.toArray(new Atom[0]), 0, 0, atomsArray.size());
+						currentCandidate.setAtoms(atomsArray);
+						atomsArray.addToIndexes();
+						
+						candidates.add(currentCandidate);
+						currentCandidate.addToIndexes();
+					}
+		
+		return candidates;
+	}
+	
+	/*@Override
 	public void process(JCas jcas) throws AnalysisEngineProcessException
 	{
 		// Get the text to be analyzed
@@ -314,11 +419,11 @@ public class BMAnnotator extends org.apache.uima.fit.component.JCasAnnotator_Imp
 			// Increase the index of the result
 			resultStartIndex = resultStartIndex + result.getInputText().length();
 		}
-	}
+	}*/
 	
 	// Generate the List of user-defined AcronymAbbrev according to the original List of acronyms 
 	// retrieved from API of MetaMap
-	private List<AcronymAbbrev> processAcronymsAbbrevs(JCas jcas,
+	/*private List<AcronymAbbrev> processAcronymsAbbrevs(JCas jcas,
 			List<AcronymsAbbrevs> acronymsAbbrevsList) throws Exception
 	{
 		List<AcronymAbbrev> acronymAbbrevList = new ArrayList<AcronymAbbrev>(acronymsAbbrevsList.size());
@@ -358,10 +463,10 @@ public class BMAnnotator extends org.apache.uima.fit.component.JCasAnnotator_Imp
 			currentAA.addToIndexes(jcas);
 		}
 		return acronymAbbrevList;
-	}
+	}*/
 	
 	// Generate the list of Negation according to the original list of Negation retrieved from MetaMap 
-	private List<Negation> processNegations(JCas jcas, List<gov.nih.nlm.nls.metamap.Negation> aNegationList, int citationStart)
+	/*private List<Negation> processNegations(JCas jcas, List<gov.nih.nlm.nls.metamap.Negation> aNegationList, int citationStart)
 			throws Exception
 	{
 		List<Negation> negationList = new ArrayList<Negation>(aNegationList.size());
@@ -413,7 +518,7 @@ public class BMAnnotator extends org.apache.uima.fit.component.JCasAnnotator_Imp
 			negationList.add(currentNegation);
 		}
 		return negationList;
-	}
+	}*/
 	
 	private FSArray createSpanFSArray(JCas jcas, List<Position> positionList, int citationStart)
 	{
@@ -444,13 +549,13 @@ public class BMAnnotator extends org.apache.uima.fit.component.JCasAnnotator_Imp
 				System.err.println("Null positional information in pos: " + pos);
 			}
 			spans.add(currentSpan);
-			currentSpan.addToIndexes();
+			// currentSpan.addToIndexes();
 		}
 		return spans;
 	}
 	
 	// Generate the list of Utterance according to the original list of Utterance retrieved from MetaMap
-	private List<Utterance> processUtterances(JCas jcas, List<gov.nih.nlm.nls.metamap.Utterance> anUtteranceList, int citationStart)
+	/*private List<Utterance> processUtterances(JCas jcas, List<gov.nih.nlm.nls.metamap.Utterance> anUtteranceList, int citationStart)
 			throws Exception
 	{
 		String docText = jcas.getDocumentText().replace("\n", " ");
@@ -460,10 +565,10 @@ public class BMAnnotator extends org.apache.uima.fit.component.JCasAnnotator_Imp
 		for (gov.nih.nlm.nls.metamap.Utterance utterance : anUtteranceList)
 		{
 			int utteranceStart = docText.indexOf(utterance.getString(), citationStart + utterance.getPosition().getX());
-			/*
+			
 			 * if indexOf can't find text because of missing spaces or newlines
 			 * replaced by spaces then trust values UIMA is providing.
-			 */
+			 
 			if (utteranceStart == -1)
 			{
 				utteranceStart = citationStart + utterance.getPosition().getX();
@@ -475,9 +580,9 @@ public class BMAnnotator extends org.apache.uima.fit.component.JCasAnnotator_Imp
 			utteranceList.add(currentUtterance);
 		}
 		return utteranceList;
-	}
+	}*/
 	
-	private void processPCMList(JCas jcas, gov.nih.nlm.nls.metamap.Utterance utterance,
+	/*private void processPCMList(JCas jcas, gov.nih.nlm.nls.metamap.Utterance utterance,
 			Utterance currentUtterance, int citationStart) throws Exception
 	{
 		String docText = jcas.getDocumentText();
@@ -492,10 +597,10 @@ public class BMAnnotator extends org.apache.uima.fit.component.JCasAnnotator_Imp
 		{
 			int phraseStart = docText.indexOf(pcm.getPhrase().getPhraseText(),
 					citationStart + pcm.getPhrase().getPosition().getX());
-			/*
+			
 			 * if indexOf can't find text because of missing spaces or newlines
 			 * replaced by spaces then trust values UIMA is providing.
-			 */
+			 
 			if (phraseStart == -1)
 			{
 				phraseStart = citationStart + pcm.getPhrase().getPosition().getX();
@@ -525,9 +630,9 @@ public class BMAnnotator extends org.apache.uima.fit.component.JCasAnnotator_Imp
 
 		currentUtterance.setPhrases(fsArray);
 		fsArray.addToIndexes();
-	}
+	}*/
 	
-	private List<Candidate> processCandidates(JCas jcas, List<Ev> candidateList, int citationStart)
+	/*private List<Candidate> processCandidates(JCas jcas, List<Ev> candidateList, int citationStart)
 			throws Exception
 	{
 		Candidate currentCandidate;
@@ -619,9 +724,9 @@ public class BMAnnotator extends org.apache.uima.fit.component.JCasAnnotator_Imp
 			currentCandidate.addToIndexes();
 		}
 		return candidates;
-	}
+	}*/
 	
-	private List<Mapping> processMappings(JCas jcas, PCM pcm, int citationStart) throws Exception
+	/*private List<Mapping> processMappings(JCas jcas, PCM pcm, int citationStart) throws Exception
 	{
 		Mapping currentMapping;
 		List<Candidate> candidates;
@@ -643,6 +748,6 @@ public class BMAnnotator extends org.apache.uima.fit.component.JCasAnnotator_Imp
 			currentMapping.addToIndexes();
 		}
 		return mappings;
-	}
+	}*/
 	
 }

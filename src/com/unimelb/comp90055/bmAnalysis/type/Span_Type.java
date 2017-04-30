@@ -9,7 +9,7 @@ import org.apache.uima.cas.Type;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Tue Apr 25 21:29:32 AEST 2017
+ * Updated by JCasGen Sun Apr 30 12:34:28 AEST 2017
  * @generated */
 public class Span_Type extends Annotation_Type {
   /** @generated */

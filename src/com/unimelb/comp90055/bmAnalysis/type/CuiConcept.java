@@ -11,8 +11,8 @@ import org.apache.uima.jcas.cas.TOP;
 
 
 /** 
- * Updated by JCasGen Tue Apr 25 21:29:32 AEST 2017
- * XML source: C:/Users/Administrator/workspace/BioMedAnalysis_REST/desc/BMAnalysisEngineDescriptor.xml
+ * Updated by JCasGen Sun Apr 30 12:28:59 AEST 2017
+ * XML source: C:/Users/Administrator/workspace/BioMedAnalysis_REST/desc/BMBasicType.xml
  * @generated */
 public class CuiConcept extends TOP {
   /** @generated

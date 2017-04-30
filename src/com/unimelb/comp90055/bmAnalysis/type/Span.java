@@ -11,7 +11,7 @@ import org.apache.uima.jcas.tcas.Annotation;
 
 
 /** 
- * Updated by JCasGen Tue Apr 25 21:29:32 AEST 2017
+ * Updated by JCasGen Sun Apr 30 12:34:28 AEST 2017
  * XML source: C:/Users/Administrator/workspace/BioMedAnalysis_REST/desc/BMAnalysisEngineDescriptor.xml
  * @generated */
 public class Span extends Annotation {

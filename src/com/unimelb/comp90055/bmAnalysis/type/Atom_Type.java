@@ -11,7 +11,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.cas.TOP_Type;
 
 /** Retrieve atoms from Metathesaurus of UMLS according to cui
- * Updated by JCasGen Tue Apr 25 21:29:31 AEST 2017
+ * Updated by JCasGen Sun Apr 30 12:34:28 AEST 2017
  * @generated */
 public class Atom_Type extends TOP_Type {
   /** @generated */

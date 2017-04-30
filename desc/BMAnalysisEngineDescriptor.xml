@@ -55,7 +55,7 @@
     </configurationParameterSettings>
     <typeSystemDescription>
       <imports>
-        <import location="BMBasicType.xml"/>
+        <import location="BMBasicTypeLite.xml"/>
       </imports>
     </typeSystemDescription>
     <typePriorities/>

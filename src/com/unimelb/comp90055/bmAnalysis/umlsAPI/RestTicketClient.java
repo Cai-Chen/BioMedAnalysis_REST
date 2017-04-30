@@ -123,21 +123,19 @@ public class RestTicketClient
 
 	public String getST(String tgt)
 	{
-		//System.out.println("ST Creating Start Time " + new java.util.Date().getTime());
+		System.out.println("ST Creating Start Time " + new java.util.Date().getTime());
 		RestAssured.baseURI = authUri;
 		Response response = given()
-				.request().with().param("service", service).expect().statusCode(200).when()
+				.request().with().param("service", service).expect().when()
 				.post("/cas/v1/tickets/" + tgt);
+		if(response.statusCode() != 200)
+			return null;
 		
 		String st = response.getBody().asString();
-		//System.out.println("ST Creating End Time " + new java.util.Date().getTime());
+		System.out.println("ST Creating End Time " + new java.util.Date().getTime());
 		return st;
 	}
 	
-	public boolean hasSTFromQueue()
-	{
-		return ServiceTicketManager.getInstance().hasST();
-	}
 	
 	public String getSTFromQueue()
 	{

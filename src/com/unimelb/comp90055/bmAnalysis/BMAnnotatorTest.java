@@ -65,7 +65,7 @@ public class BMAnnotatorTest
 		// Analyze the document
 		this.jcas.setDocumentText(txt);
 		ae.process(this.jcas);
-		displayResults(this.jcas);
+	//	displayResults(this.jcas);
 		this.jcas.reset();
 	}
 
@@ -75,6 +75,7 @@ public class BMAnnotatorTest
 		
 	}
 	
+	/*
 	public void displayResults(JCas aJCas)
 	{
 		FSIndex utteranceIndex = aJCas.getAnnotationIndex(Utterance.type);
@@ -118,7 +119,7 @@ public class BMAnnotatorTest
 				}
 			}
 		}
-	}
+	}*/
 	
 	public static void main(String[] args) throws org.apache.uima.cas.CASRuntimeException,
 			org.apache.uima.analysis_engine.AnalysisEngineProcessException,

@@ -10,6 +10,7 @@ import java.util.Scanner;
 
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.response.Response;
+import com.sun.xml.internal.ws.api.config.management.policy.ManagementAssertion.Setting;
 import com.jayway.jsonpath.Configuration;
 import com.jayway.jsonpath.JsonPath;
 import com.jayway.jsonpath.spi.mapper.JacksonMappingProvider;
@@ -109,9 +110,13 @@ public class RetrieveAtoms
 		int pageCount = 999;
 		do
 		{
+			String st = null;
 			// If ST is not retrieved, then wait
-			if(!ticketClient.hasSTFromQueue())
-				continue;
+			while(st == null)
+			{
+				st = ticketClient.getSTFromQueue();
+			}
+			
 			Response response = null;
 			RestAssured.baseURI = "https://uts-ws.nlm.nih.gov";
 			System.out.println("Atom Retrieve Start_1 Time " + new java.util.Date().getTime());
@@ -119,18 +124,25 @@ public class RetrieveAtoms
 				response = given()// .log().all()
 						.request().with()
 						//.param("ticket", ticketClient.getST(tgt))
-						.param("ticket", ticketClient.getSTFromQueue())
+						.param("ticket", st)
 						.param("pageSize", 1000)
-						.param("pageNumber", page).expect().statusCode(200).when().get(path);
+						.param("pageNumber", page).expect().when().get(path);
 			else
 				response = given()// .log().all()
 							.request().with()
 							//.param("ticket", ticketClient.getST(tgt))
-							.param("ticket", ticketClient.getSTFromQueue())
+							.param("ticket", st)
 							.param("language", language)
 							.param("pageSize", 1000)
-							.param("pageNumber", page).expect().statusCode(200).when().get(path);
-			System.out.println("Atom Retrieve Start_2 Time " + new java.util.Date().getTime());
+							.param("pageNumber", page).expect().when().get(path);
+			// If the status is not 200, then break
+			
+			if(response.statusCode() != 200)
+			{
+				System.out.println(response.statusCode());
+
+				return null;
+			}
 			String output = response.getBody().asString();
 			System.out.println("Atom Retrieve Start_3 Time " + new java.util.Date().getTime());
 			Configuration config = Configuration.builder().mappingProvider(new JacksonMappingProvider()).build();

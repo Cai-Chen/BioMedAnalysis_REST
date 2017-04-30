@@ -11,7 +11,7 @@ import org.apache.uima.jcas.cas.TOP;
 
 
 /** Retrieve atoms from Metathesaurus of UMLS according to cui
- * Updated by JCasGen Tue Apr 25 21:29:31 AEST 2017
+ * Updated by JCasGen Sun Apr 30 12:34:28 AEST 2017
  * XML source: C:/Users/Administrator/workspace/BioMedAnalysis_REST/desc/BMAnalysisEngineDescriptor.xml
  * @generated */
 public class Atom extends TOP {

@@ -11,7 +11,7 @@ import org.apache.uima.cas.Feature;
 import org.apache.uima.jcas.tcas.Annotation_Type;
 
 /** 
- * Updated by JCasGen Tue Apr 25 21:29:31 AEST 2017
+ * Updated by JCasGen Sun Apr 30 12:28:59 AEST 2017
  * @generated */
 public class AcronymAbbrev_Type extends Annotation_Type {
   /** @generated */
