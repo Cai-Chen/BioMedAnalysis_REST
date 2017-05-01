@@ -5,9 +5,8 @@ import java.net.URI;
 import org.glassfish.jersey.jetty.JettyHttpContainerFactory;
 import org.glassfish.jersey.server.ResourceConfig;
 
-import com.unimelb.comp90055.bmAnalysis.umlsAPI.RetrieveSTthread;
 
-public class AnnoServiceTest
+public class AnnoServiceStart
 {
 
 	public static void main(String[] args) throws Exception

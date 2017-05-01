@@ -10,7 +10,6 @@ import java.util.Scanner;
 
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.response.Response;
-import com.sun.xml.internal.ws.api.config.management.policy.ManagementAssertion.Setting;
 import com.jayway.jsonpath.Configuration;
 import com.jayway.jsonpath.JsonPath;
 import com.jayway.jsonpath.spi.mapper.JacksonMappingProvider;

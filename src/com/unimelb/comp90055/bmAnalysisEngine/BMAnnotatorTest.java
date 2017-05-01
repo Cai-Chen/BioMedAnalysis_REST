@@ -6,28 +6,15 @@
  * @description The entrance of program
  */
 
-package com.unimelb.comp90055.bmAnalysis;
+package com.unimelb.comp90055.bmAnalysisEngine;
 
-import java.util.Iterator;
 
 import org.apache.uima.UIMAException;
-import org.apache.uima.UIMAFramework;
 import org.apache.uima.analysis_engine.AnalysisEngine;
-import org.apache.uima.analysis_engine.AnalysisEngineDescription;
-import org.apache.uima.cas.FSIndex;
-import org.apache.uima.cas.FeatureStructure;
 import org.apache.uima.fit.factory.AnalysisEngineFactory;
-import org.apache.uima.fit.factory.JCasFactory;
-import org.apache.uima.fit.util.JCasUtil;
 import org.apache.uima.jcas.JCas;
-import org.apache.uima.util.XMLInputSource;
 
 import com.unimelb.comp90055.bmAnalysis.umlsAPI.RetrieveAtoms;
-import com.unimelb.comp90055.bmAnalysis.type.Candidate;
-import com.unimelb.comp90055.bmAnalysis.type.Mapping;
-import com.unimelb.comp90055.bmAnalysis.type.Phrase;
-import com.unimelb.comp90055.bmAnalysis.type.Span;
-import com.unimelb.comp90055.bmAnalysis.type.Utterance;
 
 public class BMAnnotatorTest
 {

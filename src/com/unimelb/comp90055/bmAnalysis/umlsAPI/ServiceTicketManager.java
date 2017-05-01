@@ -6,7 +6,6 @@ import java.util.Date;
 import java.util.PriorityQueue;
 import java.util.Scanner;
 
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
 
 public class ServiceTicketManager
 {

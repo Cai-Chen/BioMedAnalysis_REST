@@ -2,28 +2,22 @@ package com.unimelb.comp90055.bmAnalysis.restService;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
-import org.apache.uima.UIMAFramework;
 import org.apache.uima.analysis_engine.AnalysisEngine;
-import org.apache.uima.analysis_engine.AnalysisEngineDescription;
 import org.apache.uima.cas.FSIndex;
 import org.apache.uima.cas.FeatureStructure;
 import org.apache.uima.fit.factory.AnalysisEngineFactory;
 import org.apache.uima.jcas.JCas;
-import org.apache.uima.util.XMLInputSource;
 
-import com.unimelb.comp90055.bmAnalysis.BMAnnotator;
 import com.unimelb.comp90055.bmAnalysis.type.Atom;
 import com.unimelb.comp90055.bmAnalysis.umlsAPI.AtomLite;
-import com.unimelb.comp90055.bmAnalysis.umlsAPI.RetrieveAtoms;
+import com.unimelb.comp90055.bmAnalysisEngine.BMAnnotator;
 
 @Path("annoService")
 public class AnnoService
@@ -64,7 +58,9 @@ public class AnnoService
 		annoRst.setDocument(text);
 		ArrayList<Candidate> candidateList = new ArrayList<Candidate>();
 		
+		@SuppressWarnings("rawtypes")
 		FSIndex candidateIndex = jcas.getAnnotationIndex(com.unimelb.comp90055.bmAnalysis.type.Candidate.type);
+		@SuppressWarnings("rawtypes")
 		Iterator candidateIter = candidateIndex.iterator();
 		while(candidateIter.hasNext())
 		{

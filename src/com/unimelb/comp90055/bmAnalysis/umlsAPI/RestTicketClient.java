@@ -85,7 +85,10 @@ public class RestTicketClient
 			inputStream.useDelimiter("\n");
 			// If the file is empty
 			if(!inputStream.hasNext())
+			{
+				inputStream.close();
 				return null;
+			}
 			// Read the record
 			String[] record = new String[2];
 			record = inputStream.next().split("\\|");
@@ -94,7 +97,10 @@ public class RestTicketClient
 			createdTime = record[1];
 			// If the tgt is expired
 			if( (new java.util.Date().getTime() - formatter.parse(createdTime).getTime()) / 3600000 > 8)
+			{
+				inputStream.close();
 				return null;
+			}
 			
 		} catch (Exception e)
 		{
@@ -142,12 +148,5 @@ public class RestTicketClient
 		return ServiceTicketManager.getInstance().getST();
 	}
 
-	public void logout(String ticket)
-	{
-		RestAssured.baseURI = authUri;
-		Response response = given()
-				.request().with().param("service", service).expect().statusCode(200).when()
-				.delete("/cas/v1/tickets/" + ticket);
-	}
 
 }

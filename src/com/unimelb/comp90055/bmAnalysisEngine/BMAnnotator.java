@@ -6,7 +6,7 @@
  * @description The Annotator class for the analysis engine
  */
 
-package com.unimelb.comp90055.bmAnalysis;
+package com.unimelb.comp90055.bmAnalysisEngine;
 
 import java.io.FileInputStream;
 import java.util.ArrayList;
@@ -16,34 +16,21 @@ import java.util.Scanner;
 
 import org.apache.uima.UimaContext;
 import org.apache.uima.analysis_component.AnalysisComponent;
-import org.apache.uima.analysis_component.JCasAnnotator_ImplBase;
 import org.apache.uima.analysis_engine.AnalysisEngineProcessException;
 import org.apache.uima.fit.descriptor.ConfigurationParameter;
 import org.apache.uima.jcas.JCas;
 import org.apache.uima.jcas.cas.FSArray;
-import org.apache.uima.jcas.cas.IntegerArray;
 import org.apache.uima.jcas.cas.StringArray;
 import org.apache.uima.resource.ResourceInitializationException;
 
 import com.unimelb.comp90055.bmAnalysis.umlsAPI.AtomLite;
 import com.unimelb.comp90055.bmAnalysis.umlsAPI.AtomManager;
-import com.unimelb.comp90055.bmAnalysis.umlsAPI.RetrieveAtoms;
 import com.unimelb.comp90055.bmAnalysis.umlsAPI.RetrieveAtomsThread;
 import com.unimelb.comp90055.bmAnalysis.umlsAPI.RetrieveSTthread;
-import com.unimelb.comp90055.bmAnalysis.type.AcronymAbbrev;
 import com.unimelb.comp90055.bmAnalysis.type.Atom;
 import com.unimelb.comp90055.bmAnalysis.type.Candidate;
-import com.unimelb.comp90055.bmAnalysis.type.CuiConcept;
-import com.unimelb.comp90055.bmAnalysis.type.Document;
-import com.unimelb.comp90055.bmAnalysis.type.Mapping;
-import com.unimelb.comp90055.bmAnalysis.type.MatchMap;
-import com.unimelb.comp90055.bmAnalysis.type.Negation;
-import com.unimelb.comp90055.bmAnalysis.type.Phrase;
 import com.unimelb.comp90055.bmAnalysis.type.Span;
-import com.unimelb.comp90055.bmAnalysis.type.Utterance;
 
-import gov.nih.nlm.nls.metamap.AcronymsAbbrevs;
-import gov.nih.nlm.nls.metamap.ConceptPair;
 import gov.nih.nlm.nls.metamap.Ev;
 import gov.nih.nlm.nls.metamap.MetaMapApi;
 import gov.nih.nlm.nls.metamap.MetaMapApiImpl;
@@ -149,7 +136,7 @@ public class BMAnnotator extends org.apache.uima.fit.component.JCasAnnotator_Imp
 	}
 	
 	// Set semantic type option from xml discription
-	private String setSemTypeOptionsXML(UimaContext aContext)
+	/*private String setSemTypeOptionsXML(UimaContext aContext)
 	{
 		String option = "";
 		// Get parameters of Semantic files and group
@@ -206,7 +193,7 @@ public class BMAnnotator extends org.apache.uima.fit.component.JCasAnnotator_Imp
 				.substring(1).replaceAll("\\s", "");
 		return option;
 
-	}
+	}*/
 	
 	private void createThreadToRetrieveAtoms(List<Result> resultList) throws Exception
 	{
@@ -216,8 +203,12 @@ public class BMAnnotator extends org.apache.uima.fit.component.JCasAnnotator_Imp
 					for(gov.nih.nlm.nls.metamap.Mapping map : pcm.getMappingList())
 						for (Ev ev : map.getEvList())
 						{
-							RetrieveAtomsThread thread = new RetrieveAtomsThread(ev.getConceptId(), language);
-							thread.start();
+							// If this cui and language were not retrieved before
+							if(!AtomManager.getInstance().hasAtomList(ev.getConceptId() + language))
+							{
+								RetrieveAtomsThread thread = new RetrieveAtomsThread(ev.getConceptId(), language);
+								thread.start();
+							}
 						}
 	}
 	
