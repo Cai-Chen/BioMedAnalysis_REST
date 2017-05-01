@@ -20,9 +20,7 @@ public class RetrieveAtomsThread extends Thread
 		{
 			RetrieveAtoms ra = new RetrieveAtoms();
 			List<AtomLite> atomList = ra.retrieveAtomsList(cui, language);
-			// If the retrieved result is null
-			if(atomList == null)
-				AtomManager.getInstance().addAtoms(cui + language, atomList);
+			AtomManager.getInstance().addAtoms(cui + language, atomList);
 		}
 	}
 }
