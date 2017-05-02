@@ -1,41 +1,27 @@
 package com.unimelb.comp90055.bmAnalysis.test;
 
-import static com.jayway.restassured.RestAssured.given;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
-import com.jayway.restassured.RestAssured;
-import com.jayway.restassured.response.Response;
-
+import java.util.HashMap;
+import java.util.Map.Entry;
 
 public class Test
 {
 
 	public static void main(String[] args)
 	{
-		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss SSS");
+		HashMap<String, String> map = new HashMap<String, String>();
 		
-		Log log = LogFactory.getLog("testLog");
-		log.info("Test started at | " + formatter.format(new Date()));
+		map.put("thread 1", "A few people have the obstructive sleep apnea, diabetic foot and kidney stones.");
+		map.put("thread 2", "A few people have the plantar fasciitis, subarachnoid hemorrhage and metatarsal fracture.");
+		map.put("thread 3", "A few people have the bloom syndrome, Glycogen storage disease and Leigh Syndrome.");
+		map.put("thread 4", "A few people have the idiopathic neuropathy, nephritis and systemic lupus erythematosus.");
+		map.put("thread 5", "A few people have the obstructive sleep apnea, diabetic foot and neonatal hypoglycemia.");
 		
-		String text = "A few people have the obstructive sleep apnea";
-		String semGroup = "Chemicals & Drugs,Disorders";
-		String language = "ENG";		
-		Response response = null;
-		RestAssured.baseURI = "http://localhost:9998/annoService/query";
-		response = given()
-				.request().with()
-				.param("text", text)
-				.param("semGroup", semGroup)
-				.param("language", language).expect().when().get();
-		if(response.statusCode() == 200)
+		for (Entry<String, String> entry : map.entrySet())
 		{
-			log.info("Retrieved at | " + formatter.format(new Date()));
+			TestThread thread = new TestThread(entry.getKey(), entry.getValue(), "Chemicals & Drugs,Disorders", "ENG");
+			thread.start();
 		}
+		
 	}
 
 }

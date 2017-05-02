@@ -1,2 +1,10 @@
-Test start | 2017-05-01 23:44:40 829
-Retrieved at | 2017-05-01 23:44:42 774
+thread 3 | Test started at | 2017-05-02 22:15:22 574
+thread 5 | Test started at | 2017-05-02 22:15:22 574
+thread 2 | Test started at | 2017-05-02 22:15:22 574
+thread 1 | Test started at | 2017-05-02 22:15:22 574
+thread 4 | Test started at | 2017-05-02 22:15:22 574
+thread 3 | Retrieved at | 2017-05-02 22:15:24 399
+thread 4 | Retrieved at | 2017-05-02 22:15:24 537
+thread 5 | Retrieved at | 2017-05-02 22:15:24 591
+thread 2 | Retrieved at | 2017-05-02 22:15:24 747
+thread 1 | Retrieved at | 2017-05-02 22:15:24 752

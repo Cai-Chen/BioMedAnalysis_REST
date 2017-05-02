@@ -1,1 +1,1 @@
-classpath*:desc/BMBasicType.xml
+classpath*:desc/BMBasicTypeLite.xml
