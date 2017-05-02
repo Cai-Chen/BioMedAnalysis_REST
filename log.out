@@ -761,3 +761,887 @@ Connection 0.0.0.0:50276<->130.14.16.164:443 closed
 Connection 0.0.0.0:50277<->130.14.16.164:443 closed
 Connection 0.0.0.0:50278<->130.14.16.164:443 closed
 Connection 0.0.0.0:50279<->130.14.16.164:443 closed
+Get connection for route {s}->https://utslogin.nlm.nih.gov
+Get connection for route {s}->https://utslogin.nlm.nih.gov
+Get connection for route {s}->https://utslogin.nlm.nih.gov
+Get connection for route {s}->https://utslogin.nlm.nih.gov
+Get connection for route {s}->https://utslogin.nlm.nih.gov
+Get connection for route {s}->https://utslogin.nlm.nih.gov
+Get connection for route {s}->https://utslogin.nlm.nih.gov
+Get connection for route {s}->https://utslogin.nlm.nih.gov
+Get connection for route {s}->https://utslogin.nlm.nih.gov
+Get connection for route {s}->https://utslogin.nlm.nih.gov
+Connecting to utslogin.nlm.nih.gov:443
+Connecting to utslogin.nlm.nih.gov:443
+Connecting to utslogin.nlm.nih.gov:443
+Connecting to utslogin.nlm.nih.gov:443
+Connecting to utslogin.nlm.nih.gov:443
+Connecting to utslogin.nlm.nih.gov:443
+Connecting to utslogin.nlm.nih.gov:443
+Connecting to utslogin.nlm.nih.gov:443
+Connecting to utslogin.nlm.nih.gov:443
+Connecting to utslogin.nlm.nih.gov:443
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+ >> "POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1[\r][\n]"
+ >> "Accept: */*[\r][\n]"
+ >> "Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1[\r][\n]"
+ >> "Content-Length: 39[\r][\n]"
+ >> "Host: utslogin.nlm.nih.gov[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+>> Accept: */*
+>> Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1
+>> Content-Length: 39
+>> Host: utslogin.nlm.nih.gov
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+>> Accept-Encoding: gzip,deflate
+ >> "service=http%3A%2F%2Fumlsks.nlm.nih.gov"
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+ >> "POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1[\r][\n]"
+ >> "Accept: */*[\r][\n]"
+ >> "Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1[\r][\n]"
+ >> "Content-Length: 39[\r][\n]"
+ >> "Host: utslogin.nlm.nih.gov[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+>> Accept: */*
+>> Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1
+>> Content-Length: 39
+>> Host: utslogin.nlm.nih.gov
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+>> Accept-Encoding: gzip,deflate
+ >> "service=http%3A%2F%2Fumlsks.nlm.nih.gov"
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+ >> "POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1[\r][\n]"
+ >> "Accept: */*[\r][\n]"
+ >> "Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1[\r][\n]"
+ >> "Content-Length: 39[\r][\n]"
+ >> "Host: utslogin.nlm.nih.gov[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+>> Accept: */*
+>> Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1
+>> Content-Length: 39
+>> Host: utslogin.nlm.nih.gov
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+>> Accept-Encoding: gzip,deflate
+ >> "service=http%3A%2F%2Fumlsks.nlm.nih.gov"
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+ >> "POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1[\r][\n]"
+ >> "Accept: */*[\r][\n]"
+ >> "Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1[\r][\n]"
+ >> "Content-Length: 39[\r][\n]"
+ >> "Host: utslogin.nlm.nih.gov[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+>> Accept: */*
+>> Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1
+>> Content-Length: 39
+>> Host: utslogin.nlm.nih.gov
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+>> Accept-Encoding: gzip,deflate
+ >> "service=http%3A%2F%2Fumlsks.nlm.nih.gov"
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+ >> "POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1[\r][\n]"
+ >> "Accept: */*[\r][\n]"
+ >> "Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1[\r][\n]"
+ >> "Content-Length: 39[\r][\n]"
+ >> "Host: utslogin.nlm.nih.gov[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+>> Accept: */*
+>> Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1
+>> Content-Length: 39
+>> Host: utslogin.nlm.nih.gov
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+>> Accept-Encoding: gzip,deflate
+ >> "service=http%3A%2F%2Fumlsks.nlm.nih.gov"
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+ >> "POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1[\r][\n]"
+ >> "Accept: */*[\r][\n]"
+ >> "Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1[\r][\n]"
+ >> "Content-Length: 39[\r][\n]"
+ >> "Host: utslogin.nlm.nih.gov[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+>> Accept: */*
+>> Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1
+>> Content-Length: 39
+>> Host: utslogin.nlm.nih.gov
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+>> Accept-Encoding: gzip,deflate
+ >> "service=http%3A%2F%2Fumlsks.nlm.nih.gov"
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+ >> "POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1[\r][\n]"
+ >> "Accept: */*[\r][\n]"
+ >> "Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1[\r][\n]"
+ >> "Content-Length: 39[\r][\n]"
+ >> "Host: utslogin.nlm.nih.gov[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+>> Accept: */*
+>> Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1
+>> Content-Length: 39
+>> Host: utslogin.nlm.nih.gov
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+>> Accept-Encoding: gzip,deflate
+ >> "service=http%3A%2F%2Fumlsks.nlm.nih.gov"
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+ >> "POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1[\r][\n]"
+ >> "Accept: */*[\r][\n]"
+ >> "Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1[\r][\n]"
+ >> "Content-Length: 39[\r][\n]"
+ >> "Host: utslogin.nlm.nih.gov[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+>> Accept: */*
+>> Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1
+>> Content-Length: 39
+>> Host: utslogin.nlm.nih.gov
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+>> Accept-Encoding: gzip,deflate
+ >> "service=http%3A%2F%2Fumlsks.nlm.nih.gov"
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+ >> "POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1[\r][\n]"
+ >> "Accept: */*[\r][\n]"
+ >> "Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1[\r][\n]"
+ >> "Content-Length: 39[\r][\n]"
+ >> "Host: utslogin.nlm.nih.gov[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+>> Accept: */*
+>> Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1
+>> Content-Length: 39
+>> Host: utslogin.nlm.nih.gov
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+>> Accept-Encoding: gzip,deflate
+ >> "service=http%3A%2F%2Fumlsks.nlm.nih.gov"
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+ >> "POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1[\r][\n]"
+ >> "Accept: */*[\r][\n]"
+ >> "Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1[\r][\n]"
+ >> "Content-Length: 39[\r][\n]"
+ >> "Host: utslogin.nlm.nih.gov[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+>> Accept: */*
+>> Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1
+>> Content-Length: 39
+>> Host: utslogin.nlm.nih.gov
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+>> Accept-Encoding: gzip,deflate
+ >> "service=http%3A%2F%2Fumlsks.nlm.nih.gov"
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 02 May 2017 12:17:24 GMT[\r][\n]"
+ << "Accept-Ranges: bytes[\r][\n]"
+ << "Server: Noelios-Restlet-Engine/1.1.10[\r][\n]"
+ << "Content-Type: text/plain;charset=ISO-8859-1[\r][\n]"
+ << "Content-Length: 35[\r][\n]"
+ << "X-VIP-Info: 130.14.16.164:443[\r][\n]"
+ << "X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080[\r][\n]"
+ << "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 02 May 2017 12:17:24 GMT
+<< Accept-Ranges: bytes
+<< Server: Noelios-Restlet-Engine/1.1.10
+<< Content-Type: text/plain;charset=ISO-8859-1
+<< Content-Length: 35
+<< X-VIP-Info: 130.14.16.164:443
+<< X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080
+<< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Connection can be kept alive indefinitely
+Parsing response as: text/plain;charset=ISO-8859-1
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "ST-1141361-fbMFLOJej2tPgxSnfSTF-cas"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@674b27f3
+Connection can be kept alive indefinitely
+Get connection for route {s}->https://utslogin.nlm.nih.gov
+Connecting to utslogin.nlm.nih.gov:443
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 02 May 2017 12:17:24 GMT[\r][\n]"
+ << "Accept-Ranges: bytes[\r][\n]"
+ << "Server: Noelios-Restlet-Engine/1.1.10[\r][\n]"
+ << "Content-Type: text/plain;charset=ISO-8859-1[\r][\n]"
+ << "Content-Length: 35[\r][\n]"
+ << "X-VIP-Info: 130.14.16.164:443[\r][\n]"
+ << "X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080[\r][\n]"
+ << "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 02 May 2017 12:17:24 GMT
+<< Accept-Ranges: bytes
+<< Server: Noelios-Restlet-Engine/1.1.10
+<< Content-Type: text/plain;charset=ISO-8859-1
+<< Content-Length: 35
+<< X-VIP-Info: 130.14.16.164:443
+<< X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080
+<< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Connection can be kept alive indefinitely
+Parsing response as: text/plain;charset=ISO-8859-1
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "ST-1141362-YDZZxEJL062As3rz3gM2-cas"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@3198d0f9
+Connection can be kept alive indefinitely
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 02 May 2017 12:17:24 GMT[\r][\n]"
+ << "Accept-Ranges: bytes[\r][\n]"
+ << "Server: Noelios-Restlet-Engine/1.1.10[\r][\n]"
+ << "Content-Type: text/plain;charset=ISO-8859-1[\r][\n]"
+ << "Content-Length: 35[\r][\n]"
+ << "X-VIP-Info: 130.14.16.164:443[\r][\n]"
+ << "X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080[\r][\n]"
+ << "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 02 May 2017 12:17:24 GMT
+<< Accept-Ranges: bytes
+<< Server: Noelios-Restlet-Engine/1.1.10
+<< Content-Type: text/plain;charset=ISO-8859-1
+<< Content-Length: 35
+<< X-VIP-Info: 130.14.16.164:443
+<< X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080
+<< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Connection can be kept alive indefinitely
+Parsing response as: text/plain;charset=ISO-8859-1
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "ST-1141363-Cl5eZ7dh7GACdylJHQgh-cas"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@2610a744
+Connection can be kept alive indefinitely
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 02 May 2017 12:17:24 GMT[\r][\n]"
+ << "Accept-Ranges: bytes[\r][\n]"
+ << "Server: Noelios-Restlet-Engine/1.1.10[\r][\n]"
+ << "Content-Type: text/plain;charset=ISO-8859-1[\r][\n]"
+ << "Content-Length: 35[\r][\n]"
+ << "X-VIP-Info: 130.14.16.164:443[\r][\n]"
+ << "X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080[\r][\n]"
+ << "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 02 May 2017 12:17:24 GMT
+<< Accept-Ranges: bytes
+<< Server: Noelios-Restlet-Engine/1.1.10
+<< Content-Type: text/plain;charset=ISO-8859-1
+<< Content-Length: 35
+<< X-VIP-Info: 130.14.16.164:443
+<< X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080
+<< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Connection can be kept alive indefinitely
+Parsing response as: text/plain;charset=ISO-8859-1
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "ST-1141364-IxDzsun0k0BsaNE9xMaM-cas"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@7a590e23
+Connection can be kept alive indefinitely
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 02 May 2017 12:17:24 GMT[\r][\n]"
+ << "Accept-Ranges: bytes[\r][\n]"
+ << "Server: Noelios-Restlet-Engine/1.1.10[\r][\n]"
+ << "Content-Type: text/plain;charset=ISO-8859-1[\r][\n]"
+ << "Content-Length: 35[\r][\n]"
+ << "X-VIP-Info: 130.14.16.164:443[\r][\n]"
+ << "X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080[\r][\n]"
+ << "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 02 May 2017 12:17:24 GMT
+<< Accept-Ranges: bytes
+<< Server: Noelios-Restlet-Engine/1.1.10
+<< Content-Type: text/plain;charset=ISO-8859-1
+<< Content-Length: 35
+<< X-VIP-Info: 130.14.16.164:443
+<< X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080
+<< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Connection can be kept alive indefinitely
+Parsing response as: text/plain;charset=ISO-8859-1
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "ST-1141365-GepbcvAh5FxajM3JpBWK-cas"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@3d208007
+Connection can be kept alive indefinitely
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 02 May 2017 12:17:24 GMT[\r][\n]"
+ << "Accept-Ranges: bytes[\r][\n]"
+ << "Server: Noelios-Restlet-Engine/1.1.10[\r][\n]"
+ << "Content-Type: text/plain;charset=ISO-8859-1[\r][\n]"
+ << "Content-Length: 35[\r][\n]"
+ << "X-VIP-Info: 130.14.16.164:443[\r][\n]"
+ << "X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080[\r][\n]"
+ << "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 02 May 2017 12:17:24 GMT
+<< Accept-Ranges: bytes
+<< Server: Noelios-Restlet-Engine/1.1.10
+<< Content-Type: text/plain;charset=ISO-8859-1
+<< Content-Length: 35
+<< X-VIP-Info: 130.14.16.164:443
+<< X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080
+<< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Connection can be kept alive indefinitely
+Parsing response as: text/plain;charset=ISO-8859-1
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "ST-1141366-qfQd26lJSzK4U7HOnmjf-cas"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@3991f3a6
+Connection can be kept alive indefinitely
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 02 May 2017 12:17:24 GMT[\r][\n]"
+ << "Accept-Ranges: bytes[\r][\n]"
+ << "Server: Noelios-Restlet-Engine/1.1.10[\r][\n]"
+ << "Content-Type: text/plain;charset=ISO-8859-1[\r][\n]"
+ << "Content-Length: 35[\r][\n]"
+ << "X-VIP-Info: 130.14.16.164:443[\r][\n]"
+ << "X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080[\r][\n]"
+ << "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 02 May 2017 12:17:24 GMT
+<< Accept-Ranges: bytes
+<< Server: Noelios-Restlet-Engine/1.1.10
+<< Content-Type: text/plain;charset=ISO-8859-1
+<< Content-Length: 35
+<< X-VIP-Info: 130.14.16.164:443
+<< X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080
+<< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Connection can be kept alive indefinitely
+Parsing response as: text/plain;charset=ISO-8859-1
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "ST-1141367-F47SsEZPmgWQFqVSfg3a-cas"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@6c5446c1
+Connection can be kept alive indefinitely
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 02 May 2017 12:17:24 GMT[\r][\n]"
+ << "Accept-Ranges: bytes[\r][\n]"
+ << "Server: Noelios-Restlet-Engine/1.1.10[\r][\n]"
+ << "Content-Type: text/plain;charset=ISO-8859-1[\r][\n]"
+ << "Content-Length: 35[\r][\n]"
+ << "X-VIP-Info: 130.14.16.164:443[\r][\n]"
+ << "X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080[\r][\n]"
+ << "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 02 May 2017 12:17:24 GMT
+<< Accept-Ranges: bytes
+<< Server: Noelios-Restlet-Engine/1.1.10
+<< Content-Type: text/plain;charset=ISO-8859-1
+<< Content-Length: 35
+<< X-VIP-Info: 130.14.16.164:443
+<< X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080
+<< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Connection can be kept alive indefinitely
+Parsing response as: text/plain;charset=ISO-8859-1
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "ST-1141368-3zowHGzHWzITCzzCzcI2-cas"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@5875d570
+Connection can be kept alive indefinitely
+Get connection for route {s}->https://utslogin.nlm.nih.gov
+Connecting to utslogin.nlm.nih.gov:443
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 02 May 2017 12:17:24 GMT[\r][\n]"
+ << "Accept-Ranges: bytes[\r][\n]"
+ << "Server: Noelios-Restlet-Engine/1.1.10[\r][\n]"
+ << "Content-Type: text/plain;charset=ISO-8859-1[\r][\n]"
+ << "Content-Length: 35[\r][\n]"
+ << "X-VIP-Info: 130.14.16.164:443[\r][\n]"
+ << "X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080[\r][\n]"
+ << "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 02 May 2017 12:17:24 GMT
+<< Accept-Ranges: bytes
+<< Server: Noelios-Restlet-Engine/1.1.10
+<< Content-Type: text/plain;charset=ISO-8859-1
+<< Content-Length: 35
+<< X-VIP-Info: 130.14.16.164:443
+<< X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080
+<< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Connection can be kept alive indefinitely
+Parsing response as: text/plain;charset=ISO-8859-1
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "ST-1141369-YRcKFMQLmSAcHqvrQndz-cas"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@5d18a573
+Connection can be kept alive indefinitely
+Get connection for route {s}->https://utslogin.nlm.nih.gov
+Connecting to utslogin.nlm.nih.gov:443
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 02 May 2017 12:17:24 GMT[\r][\n]"
+ << "Accept-Ranges: bytes[\r][\n]"
+ << "Server: Noelios-Restlet-Engine/1.1.10[\r][\n]"
+ << "Content-Type: text/plain;charset=ISO-8859-1[\r][\n]"
+ << "Content-Length: 35[\r][\n]"
+ << "X-VIP-Info: 130.14.16.164:443[\r][\n]"
+ << "X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080[\r][\n]"
+ << "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 02 May 2017 12:17:24 GMT
+<< Accept-Ranges: bytes
+<< Server: Noelios-Restlet-Engine/1.1.10
+<< Content-Type: text/plain;charset=ISO-8859-1
+<< Content-Length: 35
+<< X-VIP-Info: 130.14.16.164:443
+<< X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080
+<< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Connection can be kept alive indefinitely
+Parsing response as: text/plain;charset=ISO-8859-1
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "ST-1141370-dNCVZy5aSqOpWhh0yl79-cas"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@485008d0
+Connection can be kept alive indefinitely
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+ >> "POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1[\r][\n]"
+ >> "Accept: */*[\r][\n]"
+ >> "Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1[\r][\n]"
+ >> "Content-Length: 39[\r][\n]"
+ >> "Host: utslogin.nlm.nih.gov[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+>> Accept: */*
+>> Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1
+>> Content-Length: 39
+>> Host: utslogin.nlm.nih.gov
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+>> Accept-Encoding: gzip,deflate
+ >> "service=http%3A%2F%2Fumlsks.nlm.nih.gov"
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+ >> "POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1[\r][\n]"
+ >> "Accept: */*[\r][\n]"
+ >> "Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1[\r][\n]"
+ >> "Content-Length: 39[\r][\n]"
+ >> "Host: utslogin.nlm.nih.gov[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+>> Accept: */*
+>> Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1
+>> Content-Length: 39
+>> Host: utslogin.nlm.nih.gov
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+>> Accept-Encoding: gzip,deflate
+ >> "service=http%3A%2F%2Fumlsks.nlm.nih.gov"
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+ >> "POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1[\r][\n]"
+ >> "Accept: */*[\r][\n]"
+ >> "Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1[\r][\n]"
+ >> "Content-Length: 39[\r][\n]"
+ >> "Host: utslogin.nlm.nih.gov[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+>> Accept: */*
+>> Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1
+>> Content-Length: 39
+>> Host: utslogin.nlm.nih.gov
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+>> Accept-Encoding: gzip,deflate
+ >> "service=http%3A%2F%2Fumlsks.nlm.nih.gov"
+Get connection for route {s}->https://utslogin.nlm.nih.gov
+Connecting to utslogin.nlm.nih.gov:443
+Get connection for route {s}->https://utslogin.nlm.nih.gov
+Connecting to utslogin.nlm.nih.gov:443
+Get connection for route {s}->https://utslogin.nlm.nih.gov
+Connecting to utslogin.nlm.nih.gov:443
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 02 May 2017 12:17:25 GMT[\r][\n]"
+ << "Accept-Ranges: bytes[\r][\n]"
+ << "Server: Noelios-Restlet-Engine/1.1.10[\r][\n]"
+ << "Content-Type: text/plain;charset=ISO-8859-1[\r][\n]"
+ << "Content-Length: 35[\r][\n]"
+ << "X-VIP-Info: 130.14.16.164:443[\r][\n]"
+ << "X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080[\r][\n]"
+ << "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 02 May 2017 12:17:25 GMT
+<< Accept-Ranges: bytes
+<< Server: Noelios-Restlet-Engine/1.1.10
+<< Content-Type: text/plain;charset=ISO-8859-1
+<< Content-Length: 35
+<< X-VIP-Info: 130.14.16.164:443
+<< X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080
+<< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Connection can be kept alive indefinitely
+Parsing response as: text/plain;charset=ISO-8859-1
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "ST-1141372-WfHhV1KdkQO0htiZNNnD-cas"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@79f92702
+Connection can be kept alive indefinitely
+Get connection for route {s}->https://utslogin.nlm.nih.gov
+Connecting to utslogin.nlm.nih.gov:443
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 02 May 2017 12:17:25 GMT[\r][\n]"
+ << "Accept-Ranges: bytes[\r][\n]"
+ << "Server: Noelios-Restlet-Engine/1.1.10[\r][\n]"
+ << "Content-Type: text/plain;charset=ISO-8859-1[\r][\n]"
+ << "Content-Length: 35[\r][\n]"
+ << "X-VIP-Info: 130.14.16.164:443[\r][\n]"
+ << "X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080[\r][\n]"
+ << "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 02 May 2017 12:17:25 GMT
+<< Accept-Ranges: bytes
+<< Server: Noelios-Restlet-Engine/1.1.10
+<< Content-Type: text/plain;charset=ISO-8859-1
+<< Content-Length: 35
+<< X-VIP-Info: 130.14.16.164:443
+<< X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080
+<< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Connection can be kept alive indefinitely
+Parsing response as: text/plain;charset=ISO-8859-1
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "ST-1141373-vXc1MpaEdyI4dD3c6KF0-cas"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@297908ac
+Connection can be kept alive indefinitely
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 02 May 2017 12:17:25 GMT[\r][\n]"
+ << "Accept-Ranges: bytes[\r][\n]"
+ << "Server: Noelios-Restlet-Engine/1.1.10[\r][\n]"
+ << "Content-Type: text/plain;charset=ISO-8859-1[\r][\n]"
+ << "Content-Length: 35[\r][\n]"
+ << "X-VIP-Info: 130.14.16.164:443[\r][\n]"
+ << "X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080[\r][\n]"
+ << "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 02 May 2017 12:17:25 GMT
+<< Accept-Ranges: bytes
+<< Server: Noelios-Restlet-Engine/1.1.10
+<< Content-Type: text/plain;charset=ISO-8859-1
+<< Content-Length: 35
+<< X-VIP-Info: 130.14.16.164:443
+<< X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080
+<< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Connection can be kept alive indefinitely
+Parsing response as: text/plain;charset=ISO-8859-1
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "ST-1141374-M4YidVTtcMVhHnF0XIgm-cas"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@20d9158
+Connection can be kept alive indefinitely
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+ >> "POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1[\r][\n]"
+ >> "Accept: */*[\r][\n]"
+ >> "Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1[\r][\n]"
+ >> "Content-Length: 39[\r][\n]"
+ >> "Host: utslogin.nlm.nih.gov[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+>> Accept: */*
+>> Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1
+>> Content-Length: 39
+>> Host: utslogin.nlm.nih.gov
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+>> Accept-Encoding: gzip,deflate
+ >> "service=http%3A%2F%2Fumlsks.nlm.nih.gov"
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+ >> "POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1[\r][\n]"
+ >> "Accept: */*[\r][\n]"
+ >> "Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1[\r][\n]"
+ >> "Content-Length: 39[\r][\n]"
+ >> "Host: utslogin.nlm.nih.gov[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+>> Accept: */*
+>> Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1
+>> Content-Length: 39
+>> Host: utslogin.nlm.nih.gov
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+>> Accept-Encoding: gzip,deflate
+ >> "service=http%3A%2F%2Fumlsks.nlm.nih.gov"
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+ >> "POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1[\r][\n]"
+ >> "Accept: */*[\r][\n]"
+ >> "Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1[\r][\n]"
+ >> "Content-Length: 39[\r][\n]"
+ >> "Host: utslogin.nlm.nih.gov[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+>> Accept: */*
+>> Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1
+>> Content-Length: 39
+>> Host: utslogin.nlm.nih.gov
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+>> Accept-Encoding: gzip,deflate
+ >> "service=http%3A%2F%2Fumlsks.nlm.nih.gov"
+CookieSpec selected: ignoreCookies
+Auth cache not set in the context
+Target auth state: UNCHALLENGED
+Proxy auth state: UNCHALLENGED
+Attempt 1 to execute request
+Sending request: POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+ >> "POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1[\r][\n]"
+ >> "Accept: */*[\r][\n]"
+ >> "Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1[\r][\n]"
+ >> "Content-Length: 39[\r][\n]"
+ >> "Host: utslogin.nlm.nih.gov[\r][\n]"
+ >> "Connection: Keep-Alive[\r][\n]"
+ >> "User-Agent: Apache-HttpClient/4.3.6 (java 1.5)[\r][\n]"
+ >> "Accept-Encoding: gzip,deflate[\r][\n]"
+ >> "[\r][\n]"
+>> POST /cas/v1/tickets/TGT-288687-PKgZ56mjWdshz61iUn63Dc5c1xGBMabqpVuYaiJgb6MVgKHge4-cas HTTP/1.1
+>> Accept: */*
+>> Content-Type: application/x-www-form-urlencoded; charset=ISO-8859-1
+>> Content-Length: 39
+>> Host: utslogin.nlm.nih.gov
+>> Connection: Keep-Alive
+>> User-Agent: Apache-HttpClient/4.3.6 (java 1.5)
+>> Accept-Encoding: gzip,deflate
+ >> "service=http%3A%2F%2Fumlsks.nlm.nih.gov"
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 02 May 2017 12:17:26 GMT[\r][\n]"
+ << "Accept-Ranges: bytes[\r][\n]"
+ << "Server: Noelios-Restlet-Engine/1.1.10[\r][\n]"
+ << "Content-Type: text/plain;charset=ISO-8859-1[\r][\n]"
+ << "Content-Length: 35[\r][\n]"
+ << "X-VIP-Info: 130.14.16.164:443[\r][\n]"
+ << "X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080[\r][\n]"
+ << "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 02 May 2017 12:17:26 GMT
+<< Accept-Ranges: bytes
+<< Server: Noelios-Restlet-Engine/1.1.10
+<< Content-Type: text/plain;charset=ISO-8859-1
+<< Content-Length: 35
+<< X-VIP-Info: 130.14.16.164:443
+<< X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080
+<< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Connection can be kept alive indefinitely
+Parsing response as: text/plain;charset=ISO-8859-1
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "ST-1141375-ENRpeqrfJrfcRpognwKT-cas"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@5a71e61b
+Connection can be kept alive indefinitely
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 02 May 2017 12:17:26 GMT[\r][\n]"
+ << "Accept-Ranges: bytes[\r][\n]"
+ << "Server: Noelios-Restlet-Engine/1.1.10[\r][\n]"
+ << "Content-Type: text/plain;charset=ISO-8859-1[\r][\n]"
+ << "Content-Length: 35[\r][\n]"
+ << "X-VIP-Info: 130.14.16.164:443[\r][\n]"
+ << "X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080[\r][\n]"
+ << "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 02 May 2017 12:17:26 GMT
+<< Accept-Ranges: bytes
+<< Server: Noelios-Restlet-Engine/1.1.10
+<< Content-Type: text/plain;charset=ISO-8859-1
+<< Content-Length: 35
+<< X-VIP-Info: 130.14.16.164:443
+<< X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080
+<< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Connection can be kept alive indefinitely
+Parsing response as: text/plain;charset=ISO-8859-1
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "ST-1141376-ukKbedKcRCwSk5PwDgbc-cas"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@40617456
+Connection can be kept alive indefinitely
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 02 May 2017 12:17:26 GMT[\r][\n]"
+ << "Accept-Ranges: bytes[\r][\n]"
+ << "Server: Noelios-Restlet-Engine/1.1.10[\r][\n]"
+ << "Content-Type: text/plain;charset=ISO-8859-1[\r][\n]"
+ << "Content-Length: 35[\r][\n]"
+ << "X-VIP-Info: 130.14.16.164:443[\r][\n]"
+ << "X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080[\r][\n]"
+ << "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 02 May 2017 12:17:26 GMT
+<< Accept-Ranges: bytes
+<< Server: Noelios-Restlet-Engine/1.1.10
+<< Content-Type: text/plain;charset=ISO-8859-1
+<< Content-Length: 35
+<< X-VIP-Info: 130.14.16.164:443
+<< X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080
+<< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Connection can be kept alive indefinitely
+Parsing response as: text/plain;charset=ISO-8859-1
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "ST-1141377-X1MrLAm3OJku6a3nMsFx-cas"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@7429e6d2
+Connection can be kept alive indefinitely
+ << "HTTP/1.1 200 OK[\r][\n]"
+ << "Date: Tue, 02 May 2017 12:17:26 GMT[\r][\n]"
+ << "Accept-Ranges: bytes[\r][\n]"
+ << "Server: Noelios-Restlet-Engine/1.1.10[\r][\n]"
+ << "Content-Type: text/plain;charset=ISO-8859-1[\r][\n]"
+ << "Content-Length: 35[\r][\n]"
+ << "X-VIP-Info: 130.14.16.164:443[\r][\n]"
+ << "X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080[\r][\n]"
+ << "Strict-Transport-Security: max-age=31536000; includeSubDomains; preload[\r][\n]"
+ << "[\r][\n]"
+Receiving response: HTTP/1.1 200 OK
+<< HTTP/1.1 200 OK
+<< Date: Tue, 02 May 2017 12:17:26 GMT
+<< Accept-Ranges: bytes
+<< Server: Noelios-Restlet-Engine/1.1.10
+<< Content-Type: text/plain;charset=ISO-8859-1
+<< Content-Length: 35
+<< X-VIP-Info: 130.14.16.164:443
+<< X-Pool-Info: /Common/utslogin_p 10.1.5.113 8080
+<< Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+Connection can be kept alive indefinitely
+Parsing response as: text/plain;charset=ISO-8859-1
+Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+ << "ST-1141378-bYmHQCLo0JIFIEbvfWPQ-cas"
+Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@328d4ade
+Connection can be kept alive indefinitely
