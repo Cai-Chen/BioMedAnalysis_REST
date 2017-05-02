@@ -15,9 +15,9 @@ import org.apache.uima.cas.FeatureStructure;
 import org.apache.uima.fit.factory.AnalysisEngineFactory;
 import org.apache.uima.jcas.JCas;
 
+import com.unimelb.comp90055.bmAnalysis.bmAnalysisEngine.BMAnnotator;
 import com.unimelb.comp90055.bmAnalysis.type.Atom;
 import com.unimelb.comp90055.bmAnalysis.umlsAPI.AtomLite;
-import com.unimelb.comp90055.bmAnalysisEngine.BMAnnotator;
 
 @Path("annoService")
 public class AnnoService

@@ -6,7 +6,7 @@
  * @description The Annotator class for the analysis engine
  */
 
-package com.unimelb.comp90055.bmAnalysisEngine;
+package com.unimelb.comp90055.bmAnalysis.bmAnalysisEngine;
 
 import java.io.FileInputStream;
 import java.util.ArrayList;

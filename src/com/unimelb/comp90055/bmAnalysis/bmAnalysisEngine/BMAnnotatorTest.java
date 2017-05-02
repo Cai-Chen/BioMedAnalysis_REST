@@ -6,7 +6,7 @@
  * @description The entrance of program
  */
 
-package com.unimelb.comp90055.bmAnalysisEngine;
+package com.unimelb.comp90055.bmAnalysis.bmAnalysisEngine;
 
 
 import org.apache.uima.UIMAException;

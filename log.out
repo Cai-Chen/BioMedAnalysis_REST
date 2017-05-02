@@ -1645,3 +1645,20 @@ Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
  << "ST-1141378-bYmHQCLo0JIFIEbvfWPQ-cas"
 Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@328d4ade
 Connection can be kept alive indefinitely
+Connection 0.0.0.0:50339<->130.14.16.164:443 closed
+Connection 0.0.0.0:50341<->130.14.16.164:443 closed
+Connection 0.0.0.0:50338<->130.14.16.164:443 closed
+Connection 0.0.0.0:50342<->130.14.16.164:443 closed
+Connection 0.0.0.0:50343<->130.14.16.164:443 closed
+Connection 0.0.0.0:50340<->130.14.16.164:443 closed
+Connection 0.0.0.0:50336<->130.14.16.164:443 closed
+Connection 0.0.0.0:50344<->130.14.16.164:443 closed
+Connection 0.0.0.0:50337<->130.14.16.164:443 closed
+Connection 0.0.0.0:50335<->130.14.16.164:443 closed
+Connection 0.0.0.0:50345<->130.14.16.164:443 closed
+Connection 0.0.0.0:50346<->130.14.16.164:443 closed
+Connection 0.0.0.0:50347<->130.14.16.164:443 closed
+Connection 0.0.0.0:50348<->130.14.16.164:443 closed
+Connection 0.0.0.0:50349<->130.14.16.164:443 closed
+Connection 0.0.0.0:50350<->130.14.16.164:443 closed
+Connection 0.0.0.0:50351<->130.14.16.164:443 closed
