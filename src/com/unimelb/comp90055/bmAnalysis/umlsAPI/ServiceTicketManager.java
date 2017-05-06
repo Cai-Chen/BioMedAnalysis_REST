@@ -1,10 +1,10 @@
 package com.unimelb.comp90055.bmAnalysis.umlsAPI;
 
-import java.io.FileInputStream;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.PriorityQueue;
-import java.util.Scanner;
+
+import com.unimelb.comp90055.bmAnalysis.restService.Config;
 
 
 public class ServiceTicketManager
@@ -51,20 +51,8 @@ public class ServiceTicketManager
 			stQueue.poll();
 		// Add new STs
 		// Read the username and password
-		Scanner inputStream = null;
-		String username = null, password = null;
-		try
-		{
-			inputStream = new Scanner(new FileInputStream("resources/UMLS_userpass.txt"));
-			String[] userpass = new String[2];
-			userpass = inputStream.next().split("\\|");
-			username = userpass[0];
-			password = userpass[1];
-
-		} catch (Exception e)
-		{
-			e.printStackTrace();
-		}
+		String username = Config.getUmlsUsername();
+		String password = Config.getUmlsPassword();
 		// Initialize RestTicketClient
 		RestTicketClient ticketClient = new RestTicketClient(username, password);
 		String tgt = ticketClient.getTgt();

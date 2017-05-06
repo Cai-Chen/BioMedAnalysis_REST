@@ -8,13 +8,11 @@ import org.glassfish.jersey.server.ResourceConfig;
 
 public class AnnoServiceStart
 {
-
 	public static void main(String[] args) throws Exception
 	{
 		ResourceConfig config = new ResourceConfig(AnnoService.class);
-
-		JettyHttpContainerFactory.createServer(new URI("http://localhost:9998"), config);
+		 
+		JettyHttpContainerFactory.createServer(new URI("http://localhost:" + Config.getServerPort()), config);
 		
 	}
-
 }

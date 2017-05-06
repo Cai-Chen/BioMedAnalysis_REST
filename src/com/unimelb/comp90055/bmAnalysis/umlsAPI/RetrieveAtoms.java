@@ -2,14 +2,13 @@ package com.unimelb.comp90055.bmAnalysis.umlsAPI;
 
 import static com.jayway.restassured.RestAssured.given;
 
-import java.io.FileInputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
 
 import com.jayway.restassured.RestAssured;
 import com.jayway.restassured.response.Response;
+import com.unimelb.comp90055.bmAnalysis.restService.Config;
 import com.jayway.jsonpath.Configuration;
 import com.jayway.jsonpath.JsonPath;
 import com.jayway.jsonpath.spi.mapper.JacksonMappingProvider;
@@ -23,20 +22,8 @@ public class RetrieveAtoms
 	public RetrieveAtoms()
 	{
 		// Read the username and password
-		Scanner inputStream = null;
-		String username = null, password = null;
-		try
-		{
-			inputStream = new Scanner(new FileInputStream("resources/UMLS_userpass.txt"));
-			String[] userpass = new String[2];
-			userpass = inputStream.next().split("\\|");
-			username = userpass[0];
-			password = userpass[1];
-			
-		} catch(Exception e)
-		{
-			e.printStackTrace();
-		}
+		String username = Config.getUmlsUsername();
+		String password = Config.getUmlsPassword();
 		// Initialize RestTicketClient
 		ticketClient = new RestTicketClient(username, password);
 		System.out.println("TGT Creating Start Time " + new java.util.Date());
