@@ -8,7 +8,7 @@ import java.util.Properties;
 
 public class Config
 {
-	private static final String CONFIG_PATH = "conf\\config.properties";
+	private static final String CONFIG_PATH = "conf" + File.separator + "config.properties";
 	
 	public static String getServerPort()
 	{
