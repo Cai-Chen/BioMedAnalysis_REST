@@ -105,6 +105,9 @@ public class RestTicketClient
 		} catch (Exception e)
 		{
 			e.printStackTrace();
+		} finally
+		{
+			inputStream.close();
 		}
 		
 		return tgt;
@@ -113,17 +116,20 @@ public class RestTicketClient
 	// Write new tgt into file
 	private void setNewTgt(String tgt)
 	{
+		PrintWriter outputStream = null;
 		try
 		{
 			// Date format
 			SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-			PrintWriter outputStream = new PrintWriter(new FileOutputStream("resources/TGT.txt"));
+			outputStream = new PrintWriter(new FileOutputStream("resources/TGT.txt"));
 			outputStream.println(tgt + "|" + formatter.format(new java.util.Date()));
-			outputStream.close();
 			
 		} catch (FileNotFoundException e)
 		{
 			e.printStackTrace();
+		} finally
+		{
+			outputStream.close();
 		}
 	}
 
