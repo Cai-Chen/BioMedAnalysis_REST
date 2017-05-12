@@ -31,12 +31,7 @@ public class ServiceTicketManager
 			instance = new ServiceTicketManager();
 		return instance;
 	}
-	
-	public void addST(ServiceTicket st)
-	{
-		stQueue.add(st);
-	}
-	
+		
 	public synchronized String getST()
 	{
 		if(!stQueue.isEmpty())
@@ -44,7 +39,7 @@ public class ServiceTicketManager
 		return null;
 	}
 	
-	public void refresh()
+	public synchronized void refresh()
 	{
 		// Delete expired STs
 		while(!stQueue.isEmpty() && (new Date().getTime() - stQueue.peek().getCreatedTime().getTime()) > 240000)

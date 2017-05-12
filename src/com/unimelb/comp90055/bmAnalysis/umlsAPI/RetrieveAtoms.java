@@ -26,9 +26,9 @@ public class RetrieveAtoms
 		String password = Config.getUmlsPassword();
 		// Initialize RestTicketClient
 		ticketClient = new RestTicketClient(username, password);
-		System.out.println("TGT Creating Start Time " + new java.util.Date());
+		//System.out.println("TGT Creating Start Time " + new java.util.Date());
 		//tgt = ticketClient.getTgt();
-		System.out.println("TGT Creating End Time " + new java.util.Date());
+		//System.out.println("TGT Creating End Time " + new java.util.Date());
 	}
 
 	public void retrieveAtoms(String cui)
@@ -125,8 +125,7 @@ public class RetrieveAtoms
 			
 			if(response.statusCode() != 200)
 			{
-				System.out.println(response.statusCode());
-
+				System.out.println(response.statusCode() + " " + st + " " + language + " " + cui);
 				return null;
 			}
 			String output = response.getBody().asString();

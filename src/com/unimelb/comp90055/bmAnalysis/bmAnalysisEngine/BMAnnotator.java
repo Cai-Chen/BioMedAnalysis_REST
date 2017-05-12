@@ -129,7 +129,10 @@ public class BMAnnotator extends org.apache.uima.fit.component.JCasAnnotator_Imp
 		}
 		// Option to Restrict semantic types
 		// The second expression is to remove the first [ and last ] and ' '
-		option = "--restrict_to_sts " + typeAbbrevList.toString().substring(0, typeAbbrevList.toString().length() - 1)
+		if(typeAbbrevList.size() == 0)
+			option = "--restrict_to_sts wrongGroup";
+		else
+			option = "--restrict_to_sts " + typeAbbrevList.toString().substring(0, typeAbbrevList.toString().length() - 1)
 				.substring(1).replaceAll("\\s", "");
 		return option;
 

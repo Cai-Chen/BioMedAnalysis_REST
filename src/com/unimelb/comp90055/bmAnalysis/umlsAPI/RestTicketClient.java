@@ -47,6 +47,7 @@ public class RestTicketClient
 		if(tgt != null)
 			return tgt;
 		
+		System.out.println("TGT Creating Start Time " + new java.util.Date());
 		if (this.username != null && this.password != null)
 		{
 			RestAssured.baseURI = authUri;
@@ -68,6 +69,8 @@ public class RestTicketClient
 			tgt = h.getValue("location").substring(h.getValue("location").indexOf("TGT"));
 		}
 		setNewTgt(tgt);
+		System.out.println("TGT Creating End Time " + new java.util.Date());
+		
 		return tgt;
 	}
 	
