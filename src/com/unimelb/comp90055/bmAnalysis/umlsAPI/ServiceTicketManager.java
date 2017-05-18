@@ -25,7 +25,7 @@ public class ServiceTicketManager
 		});
 	}
 	
-	public static synchronized ServiceTicketManager getInstance()
+	public static ServiceTicketManager getInstance()
 	{
 		if(instance == null)
 			instance = new ServiceTicketManager();
@@ -44,6 +44,10 @@ public class ServiceTicketManager
 		// Delete expired STs
 		while(!stQueue.isEmpty() && (new Date().getTime() - stQueue.peek().getCreatedTime().getTime()) > 240000)
 			stQueue.poll();
+		int size = stQueue.size();
+		// If the number of ST is 10, then return
+		if(size == 10)
+			return;
 		// Add new STs
 		// Read the username and password
 		String username = Config.getUmlsUsername();
@@ -51,16 +55,10 @@ public class ServiceTicketManager
 		// Initialize RestTicketClient
 		RestTicketClient ticketClient = new RestTicketClient(username, password);
 		String tgt = ticketClient.getTgt();
-		int size = stQueue.size();
-		while(size <= 10)
-		{
-			String st = ticketClient.getST(tgt);
-			if(st != null)
-			{
-				stQueue.add(new ServiceTicket(st, new Date()));
-				size++;
-			}
-		}
-		
+
+		String st = ticketClient.getST(tgt);
+		if (st != null)
+			stQueue.add(new ServiceTicket(st, new Date()));
+
 	}
 }
