@@ -1,3 +1,11 @@
+/**
+ * Created: 30 April 2017
+ *
+ * @author Cai Chen
+ * @version 1.0
+ * @description The AtomList manager class
+ */
+
 package com.unimelb.comp90055.bmAnalysis.umlsAPI;
 
 import java.util.ArrayList;
@@ -43,5 +51,11 @@ public class AtomManager
 	public List<AtomLite> getAtomList(String cui_lang)
 	{
 		return cuiMap.get(cui_lang);
+	}
+	
+	public void resetAtomList()
+	{
+		cuiMap.clear();
+		retrievedCui.clear();
 	}
 }

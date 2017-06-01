@@ -1,3 +1,11 @@
+/**
+ * Created: 30 April 2017
+ *
+ * @author Cai Chen
+ * @version 1.0
+ * @description The class used to retrieve atoms from UMLS
+ */
+
 package com.unimelb.comp90055.bmAnalysis.umlsAPI;
 
 import static com.jayway.restassured.RestAssured.given;

@@ -1,9 +1,14 @@
+/**
+ * Created: 30 April 2017
+ *
+ * @author Cai Chen
+ * @version 1.0
+ * @description The test thread class
+ */
+
 package com.unimelb.comp90055.bmAnalysis.test;
 
 import static com.jayway.restassured.RestAssured.given;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -32,12 +37,12 @@ class TestThread extends Thread
 	public void run() 
 	{
 		Log log = LogFactory.getLog("testLog");
-		SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss SSS");
+		//SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss SSS");
 		
-		log.info(id + " | Test started at | " + formatter.format(new Date()));
+		log.info(id + " | Test started at | " + new java.util.Date().getTime());
 		
 		Response response = null;
-		RestAssured.baseURI = "http://localhost:9998/annoService/query";
+		RestAssured.baseURI = "http://readbiomed.cis.unimelb.edu.au:9999/annoService/query";
 		response = given()
 				.request().with()
 				.param("text", text)
@@ -45,7 +50,7 @@ class TestThread extends Thread
 				.param("language", language).expect().when().get();
 		if(response.statusCode() == 200)
 		{
-			log.info(id + " | Retrieved at | " + formatter.format(new Date()));
+			log.info(id + " | Retrieved at | " + new java.util.Date().getTime());
 		}
 	}
 }

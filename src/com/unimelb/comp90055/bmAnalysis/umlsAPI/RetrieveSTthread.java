@@ -1,3 +1,11 @@
+/**
+ * Created: 30 April 2017
+ *
+ * @author Cai Chen
+ * @version 1.0
+ * @description The thread used to update ST set
+ */
+
 package com.unimelb.comp90055.bmAnalysis.umlsAPI;
 
 public class RetrieveSTthread extends Thread

@@ -3,7 +3,7 @@
  *
  * @author Cai Chen
  * @version 1.0
- * @description The entrance of program
+ * @description The test program of the annotator
  */
 
 package com.unimelb.comp90055.bmAnalysis.bmAnalysisEngine;

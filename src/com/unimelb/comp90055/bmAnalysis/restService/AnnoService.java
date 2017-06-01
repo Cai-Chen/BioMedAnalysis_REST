@@ -1,3 +1,11 @@
+/**
+ * Created: 30 April 2017
+ *
+ * @author Cai Chen
+ * @version 1.0
+ * @description The service class for the REST service
+ */
+
 package com.unimelb.comp90055.bmAnalysis.restService;
 
 import java.util.ArrayList;
@@ -18,6 +26,7 @@ import org.apache.uima.jcas.JCas;
 import com.unimelb.comp90055.bmAnalysis.bmAnalysisEngine.BMAnnotator;
 import com.unimelb.comp90055.bmAnalysis.type.Atom;
 import com.unimelb.comp90055.bmAnalysis.umlsAPI.AtomLite;
+import com.unimelb.comp90055.bmAnalysis.umlsAPI.AtomManager;
 
 @Path("annoService")
 public class AnnoService
@@ -48,6 +57,8 @@ public class AnnoService
 		ae.process(jcas);
 		
 		AnnoResult annoRst = getAnnoResult(jcas, text);
+		
+		// AtomManager.getInstance().resetAtomList();
 		
 		return annoRst;
 	}

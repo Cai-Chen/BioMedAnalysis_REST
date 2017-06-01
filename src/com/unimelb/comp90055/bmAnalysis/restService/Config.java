@@ -1,3 +1,11 @@
+/**
+ * Created: 30 April 2017
+ *
+ * @author Cai Chen
+ * @version 1.0
+ * @description The Config class for the server configuration
+ */
+
 package com.unimelb.comp90055.bmAnalysis.restService;
 
 import java.io.File;
