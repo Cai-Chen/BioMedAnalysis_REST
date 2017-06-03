@@ -1,6 +1,6 @@
 # BioMedAnalysis_REST
 Author: Cai Chen (University of Melbourne)
-Supervisor: Karin Verspoor (University of Melbourne)
+Supervisor: Prof Karin Verspoor (University of Melbourne)
 
 This is the biomedical annotataion and translation service, which has 2 core functions:
 1. Identify the biomedical concept.
